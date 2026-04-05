@@ -5,7 +5,11 @@ from googleapiclient.discovery import build
 import pandas as pd
 from datetime import datetime
 from config import API_KEY
+import os
 
+if not API_KEY:
+    print("❌ API KEY NOT FOUND")
+    exit()
 # =========================================
 # CONNECT TO YOUTUBE API
 # =========================================
